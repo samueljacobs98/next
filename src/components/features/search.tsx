@@ -38,12 +38,13 @@ export function Search({ className }: { className?: string }) {
       body: JSON.stringify({ query }),
     })
       .then((res) => res.json())
-      .then(({ articles }) =>
+      .then(({ articles }) => {
         setQueryResults((prevResults) => [
           ...prevResults,
           ...(articles as QueryResult[]),
-        ])
-      )
+        ]);
+        setQuery("");
+      })
       .catch(() => {
         toast.error("Failed to search. Please try again later.");
       })
