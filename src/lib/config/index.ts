@@ -1,7 +1,7 @@
-import app from "./app";
+import openai from "./openai";
 
 const config = {
-  app,
+  openai,
 };
 
 export default config;
