@@ -1,7 +1,7 @@
-import example from "./example";
+import app from "./app";
 
 const config = {
-  example,
+  app,
 };
 
 export default config;
