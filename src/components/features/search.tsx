@@ -64,7 +64,10 @@ export function Search({ className }: { className?: string }) {
   return (
     <>
       <SearchContainer onSubmit={handleSubmit} className={cn(className)}>
-        <SearchResetButton onReset={handleReset} />
+        <SearchResetButton
+          disabled={queryResults.length === 0}
+          onReset={handleReset}
+        />
         <SearchTextArea
           value={query}
           onChange={handleChange}
